@@ -1,0 +1,23 @@
+;; -*- mode: lisp -*-
+;; This is small example how configuration can look like. Edit to suit your needs.
+
+;; Port on which builtin web server will listen.
+(defvar *staat-port* 4141)
+
+;; Url to zabbix server. This is the same URL you are put inside browser to open Zabbix login page.
+;; Both http and https are supported.
+(defvar *zabbix-url* "")
+
+;; Zabbix API access user. Make sure you grant read access to servers and actions. Read access to
+;; templates is not needed.
+(defvar *zabbix-user* "")
+
+;; Zabbix API password.
+(defvar *zabbix-password* "")
+
+;; List of server names received from Zabbix and their rewritten names displayed on status page.
+;; This option is useful if you are not going to display server hostnames but use some standardized
+;; scheme for public eye. The server name not found inside this list will be used as is.
+(defvar *server-name-matcher*
+  '(("REAL_SERVER_NAME_1" "Server no.1")
+    ("REAL_SERVER_NAME_2" "Server no.2")))
