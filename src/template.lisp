@@ -16,7 +16,7 @@
 	   ;; content
 	   (:table :class "table"
 	     (:thead
-           (:tr (:th "Server name") (:th "Status") (:th "Details")))
+           (:tr (:th "Server name") (:th "Status")))
 		 (:tbody ,@body)))
 	  (:div :class "footer"
 	   (:div :class "container"

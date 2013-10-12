@@ -51,7 +51,12 @@ will be set with appropriate content list."
 
 (defun set-url! (url)
   "Set internal Zabbix URL. Make sure to use the same URL you type in browser."
-  (setq *url* (concatenate 'string url "/api_jsonrpc.php")))
+  (if url
+	(setq *url* (concatenate 'string url "/api_jsonrpc.php"))))
+
+(defun have-url? ()
+  "Check if internal Zabbix URL was set."
+  *url*)
 
 (defun is-error? (ret)
   "Check if returned content is requested content or error."

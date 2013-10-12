@@ -7,4 +7,5 @@
 		   :login
 		   :is-error?
 		   :get-hosts
-		   :get-triggers))
+		   :get-triggers
+		   :have-url?))

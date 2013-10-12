@@ -15,6 +15,12 @@
 ;; Zabbix API password.
 (defvar *zabbix-password* "")
 
+;; Zabbix fetch interval in seconds. This is the number of seconds has to be passed before application
+;; connects to Zabbix to retrieve fresh data. Keeping value too low could cause application to hammer
+;; Zabbix server in case of large number of requests; keeping value too high and application can miss
+;; some notifications.
+(defvar *zabbix-fetch-interval* 120)
+
 ;; List of server names received from Zabbix and their rewritten names displayed on status page.
 ;; This option is useful if you are not going to display server hostnames but use some standardized
 ;; scheme for public eye. The server name not found inside this list will be used as is.
