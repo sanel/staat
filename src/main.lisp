@@ -107,6 +107,7 @@ from server triggers and fill details if given."
                  (format t "--> ~A~%" "tick"))))))
 
 (defun start-server (config)
+  "Start server by reading details from configuration."
   (load config)
   (setq *app-lock* (bordeaux-threads:make-lock))
   (let1 port (conf-get *staat-port* 4141)
